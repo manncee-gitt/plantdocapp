@@ -1,5 +1,5 @@
 // screens/HistoryScreen.js
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function HistoryScreen() {
   return (
@@ -23,10 +23,21 @@ export default function HistoryScreen() {
   );
 }
 
-const styles = StyleSheet.create({ 
-  container: { flex: 1, padding: 20, paddingTop: 40, backgroundColor: '#F5F7EC' }, 
-  header: { fontSize: 22, fontWeight: 'bold', marginBottom: 20 }, 
-  item: { backgroundColor: '#FFF', padding: 15, borderRadius: 8, elevation: 1, marginBottom: 10 },
-  title: { fontSize: 16, fontWeight: 'bold', color: '#2E8B57' },
-  date: { fontSize: 12, color: '#666', marginTop: 5 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    paddingTop: 40,
+    backgroundColor: "#F5F7EC",
+  },
+  header: { fontSize: 22, fontWeight: "bold", marginBottom: 20 },
+  item: {
+    backgroundColor: "#FFF",
+    padding: 15,
+    borderRadius: 8,
+    elevation: 1,
+    marginBottom: 10,
+  },
+  title: { fontSize: 16, fontWeight: "bold", color: "#2E8B57" },
+  date: { fontSize: 12, color: "#666", marginTop: 5 },
 });

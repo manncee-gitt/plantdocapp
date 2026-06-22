@@ -1,10 +1,10 @@
 // screens/SplashScreen.js
-import { useEffect } from 'react';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import { useEffect } from "react";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 
 export default function SplashScreen({ navigation }) {
   useEffect(() => {
-    setTimeout(() => navigation.replace('Login'), 2000);
+    setTimeout(() => navigation.replace("Login"), 2000);
   }, [navigation]);
 
   return (
@@ -14,4 +14,12 @@ export default function SplashScreen({ navigation }) {
     </View>
   );
 }
-const styles = StyleSheet.create({ container: { flex: 1, backgroundColor: '#2E8B57', justifyContent: 'center', alignItems: 'center' }, logo: { fontSize: 36, fontWeight: 'bold', color: '#FFF' }});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#2E8B57",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  logo: { fontSize: 36, fontWeight: "bold", color: "#FFF" },
+});
