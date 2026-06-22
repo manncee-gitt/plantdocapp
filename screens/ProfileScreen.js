@@ -1,14 +1,48 @@
-// screens/ProfileScreen.js
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { Ionicons } from "@expo/vector-icons";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 export default function ProfileScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.name}>User Profile</Text>
-      <TouchableOpacity style={styles.btn} onPress={() => navigation.replace('Login')}>
-        <Text style={styles.btnText}>Log Out</Text>
-      </TouchableOpacity>
+      <Text style={styles.headerTitle}>Profile</Text>
+      <View style={styles.content}>
+        <TouchableOpacity
+          style={styles.logoutBtn}
+          onPress={() => navigation.replace("Login")}
+        >
+          <Ionicons name="log-out-outline" size={20} color="#E53935" />
+          <Text style={styles.logoutText}>Log Out</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
-const styles = StyleSheet.create({ container: { flex: 1, alignItems: 'center', padding: 20, paddingTop: 60 }, name: { fontSize: 22, fontWeight: 'bold', marginBottom: 40 }, btn: { padding: 15, borderWidth: 1, borderColor: '#E53935', borderRadius: 8, width: '100%', alignItems: 'center' }, btnText: { color: '#E53935', fontWeight: 'bold' }});
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: "#F5F7F2", paddingTop: 40 },
+  headerTitle: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#333",
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  content: { flex: 1, justifyContent: "center", paddingHorizontal: 20 },
+  logoutBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 16,
+    borderWidth: 1,
+    borderColor: "#E53935",
+    borderRadius: 16,
+    gap: 8,
+  },
+  logoutText: { color: "#E53935", fontWeight: "bold", fontSize: 15 },
+});
